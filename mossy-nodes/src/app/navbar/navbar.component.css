@@ -1,0 +1,19 @@
+.fileImage {
+    width: 5rem;
+    height: 5rem;
+    margin-left: 1rem;
+}
+
+.navBar {
+    padding-top: 3rem;
+}
+
+a {
+    color: black;
+    align-content: center;
+}
+
+a p {
+    margin-left: 1rem;
+    
+}

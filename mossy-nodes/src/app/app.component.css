@@ -1,0 +1,13 @@
+#desktopBackground {
+    background-image: url("src\assets\images\pixelBG.png");
+    font-family: 'Courier New', Courier, monospace;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#desktopTaskbar {
+    width: 100%;
+    background-color: #BEAA79;
+    height: 3rem;
+}

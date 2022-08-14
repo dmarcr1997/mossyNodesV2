@@ -1,0 +1,8 @@
+.header-card {
+    background-color: transparent;
+    line-height: 0.5rem;
+}
+
+.header-card p {
+    font-size: large;
+}
