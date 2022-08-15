@@ -6,3 +6,12 @@
 .pop-up-card p {
     font-size: large;
 }
+
+#close-button {
+    top: 0;
+    float: right;
+    border: #BEAA79;
+    border-radius: 5%;
+    font-size: large;
+    background-color: #BEAA79;
+}

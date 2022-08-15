@@ -9,25 +9,25 @@
         <li ngbNavItem="middle top">
             <a (click)="setActive('middle top', 0)" ngbNavLink><img src="{{ activeItem(0) ? fileImageSrc : darkFileImageSrc }}" class="fileImage"/><p><strong>Bio</strong></p></a>
             <ng-template ngbNavContent>
-                <app-bio></app-bio>
+                <app-bio (onCloseTab)="closeTab()"></app-bio>
             </ng-template>
         </li>
         <li ngbNavItem="middle">
             <a (click)="setActive('middle', 1)" ngbNavLink><img src="{{ activeItem(1) ? fileImageSrc : darkFileImageSrc }}" class="fileImage"/><p><strong>Portfolio</strong></p></a>
             <ng-template ngbNavContent>
-                <app-portfolio></app-portfolio>
+                <app-portfolio (onCloseTab)="closeTab()"></app-portfolio>
             </ng-template>
         </li>
         <li ngbNavItem="middle bottom">
             <a (click)="setActive('middle bottom', 2)" ngbNavLink><img src="{{ activeItem(2) ? fileImageSrc : darkFileImageSrc }}" class="fileImage"/><p><strong>Resume</strong></p></a>
             <ng-template ngbNavContent>
-                <app-resume></app-resume>
+                <app-resume (onCloseTab)="closeTab()"></app-resume>
             </ng-template>
         </li>
         <li ngbNavItem="bottom">
             <a (click)="setActive('bottom', 3)" ngbNavLink><img src="{{ activeItem(3) ? fileImageSrc : darkFileImageSrc }}" class="fileImage"/><p><strong>Contact</strong></p></a>
             <ng-template ngbNavContent>
-                <app-contact></app-contact>
+                <app-contact (onCloseTab)="closeTab()"></app-contact>
             </ng-template>
         </li>
     </ul>

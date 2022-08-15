@@ -24,8 +24,7 @@ export class NavbarComponent implements OnInit {
   setActive(name: string, navIndex?: number): void {
     if(navIndex !== undefined) {
       if (this.navItems[navIndex] === true && !this.navItems.every(item => item === true)) {
-        this.navItems = [ true, true, true, true];
-        this.active = 'top';
+        this.closeTab();
       } else {
         this.navItems.forEach((item, indx) => {
           indx === navIndex ? this.navItems[indx] = true : this.navItems[indx] = false;
@@ -33,8 +32,12 @@ export class NavbarComponent implements OnInit {
         this.active = name;
       }
     } else {
-      this.navItems = [ true, true, true, true];
-      this.active = 'top'
+      this.closeTab();
     }
+  }
+
+  closeTab() {
+    this.navItems = [ true, true, true, true];
+    this.active = 'top';
   }
 }
