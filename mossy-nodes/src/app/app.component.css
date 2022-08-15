@@ -1,7 +1,8 @@
-#desktopBackground {
+.desktopBackground {
     background-image: url("src\assets\images\pixelBG.png");
     font-family: 'Courier New', Courier, monospace;
-    height: 100vh;
+    height: 100%;
+    width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -10,4 +11,8 @@
     width: 100%;
     background-color: #BEAA79;
     height: 3rem;
+}
+
+#main-container {
+    flex: content;
 }
