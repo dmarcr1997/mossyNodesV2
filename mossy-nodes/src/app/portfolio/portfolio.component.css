@@ -15,3 +15,27 @@
     font-size: large;
     background-color: #BEAA79;
 }
+
+#full-screen-button {
+    top: 0;
+    float: right;
+    border: #BEAA79;
+    border-radius: 5%;
+    font-size: large;
+    background-color: #BEAA79;
+}
+
+.card-regular {
+    width: 120vh; 
+    height: 80vh;
+}
+
+.card-full-screen {
+    position: absolute; 
+    width: 100vw; 
+    height: 150vh; 
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+}

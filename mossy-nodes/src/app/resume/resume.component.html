@@ -1,6 +1,7 @@
-<div class="card pop-up-card" style="width: 120vh; height: 80vh;">
+<div class="{{  getStyle() }} card pop-up-card">
     <div class="card-body">
-        <button id="close-button" (click)="closeButtonClicked()">X</button>
+        <button id="close-button" (click)="closeButtonClicked()">&#10006;</button>
+        <button id="full-screen-button" (click)="fullScreenButtonClicked()"><strong>&#x26F6;</strong></button>
         <h1 class="card-title"><strong>Resume</strong></h1>
         <p class="card-text">I'm a dedicated programmer, engineer,</p>
         <p class="card-text">and technology enthusiast located in</p>

@@ -7,6 +7,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class ResumeComponent implements OnInit {
   @Output() onCloseTab: EventEmitter<any> = new EventEmitter();
+  fullScreen: boolean = false;
   constructor() { }
 
   ngOnInit(): void {
@@ -14,6 +15,14 @@ export class ResumeComponent implements OnInit {
 
   closeButtonClicked(): void {
     this.onCloseTab.emit([]);
+  }
+
+  getStyle(): string {
+    return this.fullScreen ?  "card-full-screen" : "card-regular";
+  }
+
+  fullScreenButtonClicked(): void { 
+    this.fullScreen = !this.fullScreen;
   }
 
 }
