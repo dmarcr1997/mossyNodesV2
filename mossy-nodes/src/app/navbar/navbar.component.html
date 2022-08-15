@@ -15,36 +15,19 @@
         <li ngbNavItem="middle">
             <a (click)="setActive('middle', 1)" ngbNavLink><img src="{{ activeItem(1) ? fileImageSrc : darkFileImageSrc }}" class="fileImage"/><p><strong>Portfolio</strong></p></a>
             <ng-template ngbNavContent>
-                <p>Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko
-                farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts
-                ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar
-                helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson
-                8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester
-                stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
+                <app-portfolio></app-portfolio>
             </ng-template>
         </li>
         <li ngbNavItem="middle bottom">
             <a (click)="setActive('middle bottom', 2)" ngbNavLink><img src="{{ activeItem(2) ? fileImageSrc : darkFileImageSrc }}" class="fileImage"/><p><strong>Resume</strong></p></a>
             <ng-template ngbNavContent>
-                <p>Sed commodo, leo at suscipit dictum, quam est porttitor sapien, eget sodales nibh elit id diam. Nulla facilisi.
-                Donec egestas ligula vitae odio interdum aliquet. Duis lectus turpis, luctus eget tincidunt eu, congue et odio.
-                Duis pharetra et nisl at faucibus. Quisque luctus pulvinar arcu, et molestie lectus ultrices et. Sed diam urna,
-                egestas ut ipsum vel, volutpat volutpat neque. Praesent fringilla tortor arcu. Vivamus faucibus nisl enim, nec
-                tristique ipsum euismod facilisis. Morbi ut bibendum est, eu tincidunt odio. Orci varius natoque penatibus et
-                magnis dis parturient montes, nascetur ridiculus mus. Mauris aliquet odio ac lorem aliquet ultricies in eget
-                neque. Phasellus nec tortor vel tellus pulvinar feugiat.</p>
+                <app-resume></app-resume>
             </ng-template>
         </li>
         <li ngbNavItem="bottom">
             <a (click)="setActive('bottom', 3)" ngbNavLink><img src="{{ activeItem(3) ? fileImageSrc : darkFileImageSrc }}" class="fileImage"/><p><strong>Contact</strong></p></a>
             <ng-template ngbNavContent>
-                <p>Sed commodo, leo at suscipit dictum, quam est porttitor sapien, eget sodales nibh elit id diam. Nulla facilisi.
-                Donec egestas ligula vitae odio interdum aliquet. Duis lectus turpis, luctus eget tincidunt eu, congue et odio.
-                Duis pharetra et nisl at faucibus. Quisque luctus pulvinar arcu, et molestie lectus ultrices et. Sed diam urna,
-                egestas ut ipsum vel, volutpat volutpat neque. Praesent fringilla tortor arcu. Vivamus faucibus nisl enim, nec
-                tristique ipsum euismod facilisis. Morbi ut bibendum est, eu tincidunt odio. Orci varius natoque penatibus et
-                magnis dis parturient montes, nascetur ridiculus mus. Mauris aliquet odio ac lorem aliquet ultricies in eget
-                neque. Phasellus nec tortor vel tellus pulvinar feugiat.</p>
+                <app-contact></app-contact>
             </ng-template>
         </li>
     </ul>
