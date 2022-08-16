@@ -19,3 +19,9 @@
 #main-container {
     flex: content;
 }
+
+.fileImage {
+    width: 5rem;
+    height: 5rem;
+    margin-left: 1rem;
+}

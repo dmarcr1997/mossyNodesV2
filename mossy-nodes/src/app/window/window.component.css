@@ -1,0 +1,76 @@
+.pop-up-card {
+    background-color: #BEAA79;
+    line-height: 0.5rem;
+    border-bottom-left-radius: 0.5%;
+    border-bottom-right-radius: 0.5%;
+    
+}
+
+.pop-up-card p {
+    font-size: large;
+}
+
+#close-button {
+    top: 0;
+    float: right;
+    border: #3F8885;
+    border-radius: 5%;
+    font-size: large;
+    background-color: #3F8885;
+}
+
+#full-screen-button {
+    top: 0;
+    float: right;
+    border: #3F8885;
+    border-radius: 5%;
+    font-size: large;
+    background-color: #3F8885;
+}
+
+#close-button-fs {
+    top: 0;
+    float: right;
+    border: #BEAA79;
+    border-radius: 5%;
+    font-size: large;
+    background-color: #BEAA79;
+}
+
+#full-screen-button-fs {
+    top: 0;
+    float: right;
+    border: #BEAA79;
+    border-radius: 5%;
+    font-size: large;
+    background-color: #BEAA79;
+}
+
+.card-regular {
+    width: 120vh; 
+    height: 80vh;
+    background-color: #3F8885;
+}
+
+.card-full-screen {
+    position: absolute; 
+    width: 100vw; 
+    height: 150vh; 
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    background-color: #BEAA79;
+    margin-right: 1rem;
+}
+
+#file-header {
+    border: 1rem #3F8885;
+    background-color: #3F8885;
+    padding: 0;
+}
+
+#header-full-screen {
+    padding-right: 1rem;
+    background-color: #BEAA79;
+}
