@@ -6,12 +6,15 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    display: flex;
+    overflow-y: scroll;
+    flex-wrap: wrap;
 }
 
 #desktopTaskbar {
     width: 100%;
     background-color: #BEAA79;
-    height: 3rem;
+    height: 5vh;
     bottom: 0;
     position: absolute;
 }
@@ -24,4 +27,8 @@
     width: 5rem;
     height: 5rem;
     margin-left: 1rem;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }

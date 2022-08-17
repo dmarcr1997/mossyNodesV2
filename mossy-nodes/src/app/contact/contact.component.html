@@ -7,15 +7,15 @@
         <h1 class="card-title"><strong>Contact</strong></h1>
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Full Name</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="John Doe" (change)="updateName($event)">
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="John Doe" [value]="name" (change)="updateName($event)">
         </div>
         <div class="mb-3">
             <label for="exampleFormControlInput2" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="name@example.com" (change)="updateEmail($event)">
+            <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="name@example.com" [value]="email" (change)="updateEmail($event)">
         </div>
         <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Message</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" (change)="updateMessage($event)"></textarea>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [value]="message" (change)="updateMessage($event)"></textarea>
         </div>
         <button class="btn btn-success btn-md" (click)="submitButtonClicked()">Submit</button>
     </div>

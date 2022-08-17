@@ -44,6 +44,9 @@ export class ContactComponent implements OnInit {
   async submitButtonClicked() {
     let {email, name, message} = this;
     this.contactService.PostMessage({name, email, message , enctype: "multipart/form-data"})
+    this.name = '';
+    this.email = '';
+    this.message = '';
   }
 
   updateName(e: any) {

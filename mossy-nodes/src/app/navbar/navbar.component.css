@@ -1,11 +1,7 @@
 .fileImage {
-    width: 5rem;
-    height: 5rem;
+    width: 4rem;
+    height: 4rem;
     margin-left: 1rem;
-}
-
-.navBar {
-    padding-top: 3rem;
 }
 
 a {
@@ -15,5 +11,15 @@ a {
 
 a p {
     margin-left: 1rem;
-    
+    font-size: medium;
+}
+
+.nav {
+    height: 95vh;
+    flex-wrap: nowrap;
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
