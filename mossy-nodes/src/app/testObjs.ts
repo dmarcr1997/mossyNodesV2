@@ -16,9 +16,3 @@ export const resObj: IContent = {
     body: `<p class="card-text">Hello my name is Damon Rocha</p>`,
     extras: []
 }
-
-export const contactObj: IContent = {
-    header: "Contact",
-    body: `<p class="card-text">Hello my name is Damon Rocha</p>`,
-    extras: []
-}

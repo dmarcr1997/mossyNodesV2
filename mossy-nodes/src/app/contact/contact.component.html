@@ -1,0 +1,22 @@
+<div class="{{ getStyle() }} card">
+    <div class="card-header" id="{{ getHeaderStyle() }}">
+        <button id="close-button{{getButtonStyle()}}" (click)="closeButtonClicked()">&#10006;</button>
+        <button id="full-screen-button{{ getButtonStyle() }}" (click)="fullScreenButtonClicked()"><strong>&#x26F6;</strong></button>
+    </div>
+    <div class="card-body  pop-up-card">
+        <h1 class="card-title"><strong>Contact</strong></h1>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Full Name</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="John Doe" (change)="updateName($event)">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput2" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="name@example.com" (change)="updateEmail($event)">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" (change)="updateMessage($event)"></textarea>
+        </div>
+        <button class="btn btn-success btn-md" (click)="submitButtonClicked()">Submit</button>
+    </div>
+</div>

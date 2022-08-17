@@ -1,5 +1,5 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { bioObj, portObj, resObj, contactObj } from '../testObjs';
+import { Component, OnInit } from '@angular/core';
+import { bioObj, portObj, resObj } from '../testObjs';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -11,7 +11,7 @@ export class NavbarComponent implements OnInit {
   fileImageSrc = 'assets/svg/FileIcon.svg';  
   darkFileImageSrc = 'assets/svg/FileIconDark.svg';
   trashCanImage = 'assets/svg/TrashCan.svg';
-  content = {bioObj, portObj, resObj, contactObj}
+  content = { bioObj, portObj, resObj };
   constructor() { }
 
   ngOnInit(): void {

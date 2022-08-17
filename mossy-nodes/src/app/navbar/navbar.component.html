@@ -22,7 +22,7 @@
         <li ngbNavItem="bottom">
             <a (click)="setActive('bottom', 3)" ngbNavLink><img src="{{ activeItem(3) ? fileImageSrc : darkFileImageSrc }}" class="fileImage"/><p><strong>Contact</strong></p></a>
             <ng-template ngbNavContent>
-                <app-window (onCloseTab)="closeTab()" [content]="content.contactObj"></app-window>
+                <app-contact (onCloseTab)="closeTab()"></app-contact>
             </ng-template>
         </li>
         <li ngbNavItem="top">
