@@ -3,7 +3,7 @@
         <button id="close-button{{getButtonStyle()}}" (click)="closeButtonClicked()">&#10006;</button>
         <button id="full-screen-button{{ getButtonStyle() }}" (click)="fullScreenButtonClicked()"><strong>&#x26F6;</strong></button>
     </div>
-    <div class="card-body  pop-up-card">
+    <div class="card-body pop-up-card">
         <h1 class="card-title"><strong>{{content.header}}</strong></h1>
         <div [innerHTML]="content.body"></div>
     </div>

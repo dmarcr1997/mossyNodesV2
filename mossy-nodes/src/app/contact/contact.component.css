@@ -78,3 +78,50 @@
 .btn-success {
     background-color: #3F8885;
 }
+
+@media screen and (max-width: 1213px) and (min-width: 780px){
+    .card-regular {
+        width: 35rem; 
+        height: 80vh;
+        background-color: #3F8885;
+        margin-top: 2rem;
+    }
+}
+
+@media  screen and (max-width: 780px) {
+    .card-regular {
+        position: absolute; 
+        width: 100vw; 
+        height: 150vh; 
+        top:0;
+        left:0;
+        bottom:0;
+        right:0;
+        background-color: #BEAA79;
+        margin-right: 1rem;
+        margin-top: 0rem;
+    }
+
+    #file-header {
+        padding-right: 0.5rem;
+        background-color: #BEAA79;
+    }
+
+    #close-button {
+        top: 0;
+        float: right;
+        border: #BEAA79;
+        border-radius: 5%;
+        font-size: large;
+        background-color: #BEAA79;
+    }
+    
+    #full-screen-button {
+        top: 0;
+        float: right;
+        border: #BEAA79;
+        border-radius: 5%;
+        font-size: large;
+        background-color: #BEAA79;
+    }
+}
