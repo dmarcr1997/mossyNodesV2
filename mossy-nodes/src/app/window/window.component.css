@@ -8,8 +8,19 @@
     margin-right: 1vw;
 }
 
-.pop-up-card p {
+::ng-deep .pop-up-card h1 strong {
+    font-size: 5rem;
+}
+
+::ng-deep .pop-up-card img {
+    width: 30vh;
+    height: 30vh;
+    float: left;
+}
+
+::ng-deep .pop-up-card p {
     font-size: large;
+    margin-top: 1rem;;
 }
 
 #close-button {

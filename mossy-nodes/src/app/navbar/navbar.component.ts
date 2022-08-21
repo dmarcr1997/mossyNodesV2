@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { bioObj, portObj, resObj } from '../testObjs';
+import {map } from 'rxjs';
+import { GetContentService } from '../get-content.service';
+import { IContentItem } from '../models/IContentItem';
+
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -11,10 +14,13 @@ export class NavbarComponent implements OnInit {
   fileImageSrc = 'assets/svg/FileIcon.svg';  
   darkFileImageSrc = 'assets/svg/FileIconDark.svg';
   trashCanImage = 'assets/svg/TrashCan.svg';
-  content = { bioObj, portObj, resObj };
-  constructor() { }
+  content: IContentItem[] = [];
+  constructor(private readonly getContentSvc: GetContentService) { }
 
   ngOnInit(): void {
+    this.getContentSvc.getContent().pipe(
+      map(data => this.content = data.data),
+    ).subscribe()  
   }
 
   activeItem(navIndex: number): boolean {

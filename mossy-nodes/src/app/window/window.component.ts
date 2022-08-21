@@ -1,5 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Observable } from 'rxjs';
 import { IContent } from '../models/IContent';
+import { IContentItem } from '../models/IContentItem';
 
 @Component({
   selector: 'app-window',
@@ -8,12 +10,16 @@ import { IContent } from '../models/IContent';
 })
 export class WindowComponent implements OnInit {
   @Output() onCloseTab: EventEmitter<any> = new EventEmitter();
-  @Input() content: IContent = {header: '', body: '', extras: []};
+  @Input() content!: IContentItem;
   
   fullScreen: boolean = false;
+  header: string = '';
+  value: string = '';
   constructor() { }
 
   ngOnInit(): void {
+    this.header = this.content.header;
+    this.value = this.content.value;
   }
 
   closeButtonClicked(): void {

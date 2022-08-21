@@ -4,19 +4,19 @@
         <li ngbNavItem="middle top">
             <a (click)="setActive('middle top', 0)" ngbNavLink><img src="{{ activeItem(0) ? fileImageSrc : darkFileImageSrc }}" class="fileImage"/><p><strong>Bio</strong></p></a>
             <ng-template ngbNavContent>
-                <app-window (onCloseTab)="closeTab()" [content]="content.bioObj"></app-window>
+                <app-window (onCloseTab)="closeTab()" [content]="content[0]"></app-window>
             </ng-template>
         </li>
         <li ngbNavItem="middle">
             <a (click)="setActive('middle', 1)" ngbNavLink><img src="{{ activeItem(1) ? fileImageSrc : darkFileImageSrc }}" class="fileImage"/><p><strong>Portfolio</strong></p></a>
             <ng-template ngbNavContent>
-                <app-window (onCloseTab)="closeTab()" [content]="content.portObj"></app-window>
+                <app-window (onCloseTab)="closeTab()" [content]="content[0]"></app-window>
             </ng-template>
         </li>
         <li ngbNavItem="middle bottom">
             <a (click)="setActive('middle bottom', 2)" ngbNavLink><img src="{{ activeItem(2) ? fileImageSrc : darkFileImageSrc }}" class="fileImage"/><p><strong>Resume</strong></p></a>
             <ng-template ngbNavContent>
-                <app-window (onCloseTab)="closeTab()" [content]="content.resObj"></app-window>
+                <app-window (onCloseTab)="closeTab()" [content]="content[0]"></app-window>
             </ng-template>
         </li>
         <li ngbNavItem="bottom">
