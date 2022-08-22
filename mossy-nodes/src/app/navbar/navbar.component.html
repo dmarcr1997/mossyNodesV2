@@ -10,7 +10,7 @@
         <li ngbNavItem="middle">
             <a (click)="setActive('middle', 1)" ngbNavLink><img src="{{ activeItem(1) ? fileImageSrc : darkFileImageSrc }}" class="fileImage"/><p><strong>Portfolio</strong></p></a>
             <ng-template ngbNavContent>
-                <app-window (onCloseTab)="closeTab()" [content]="content[0]"></app-window>
+                <app-window (onCloseTab)="closeTab()" [content]="content[1]" [portfolio]=true></app-window>
             </ng-template>
         </li>
         <li ngbNavItem="middle bottom">

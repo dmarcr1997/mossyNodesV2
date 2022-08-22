@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { Observable } from 'rxjs';
 import { IContent } from '../models/IContent';
 import { IContentItem } from '../models/IContentItem';
@@ -11,13 +11,15 @@ import { IContentItem } from '../models/IContentItem';
 export class WindowComponent implements OnInit {
   @Output() onCloseTab: EventEmitter<any> = new EventEmitter();
   @Input() content!: IContentItem;
-  
+  @Input() portfolio!: boolean;
+
   fullScreen: boolean = false;
   header: string = '';
   value: string = '';
   constructor() { }
 
   ngOnInit(): void {
+    console.table(this.content);
     this.header = this.content.header;
     this.value = this.content.value;
   }

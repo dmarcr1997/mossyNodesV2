@@ -7,6 +7,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { IntroComponent } from './intro/intro.component';
 import { WindowComponent } from './window/window.component';
 import { ContactComponent } from './contact/contact.component';
+import { PortfolioCardComponent } from './portfolio-card/portfolio-card.component';
+import { PortfolioCardContainerComponent } from './portfolio-card-container/portfolio-card-container.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { ContactComponent } from './contact/contact.component';
     NavbarComponent,
     IntroComponent,
     WindowComponent,
-    ContactComponent
+    ContactComponent,
+    PortfolioCardComponent,
+    PortfolioCardContainerComponent
   ],
   imports: [
     BrowserModule,

@@ -5,6 +5,9 @@
     </div>
     <div class="card-body pop-up-card">
         <h1 class="card-title" [innerHTML]="header"></h1>
-        <div [innerHTML]="value"></div>
+        <div class="cardHtml" [innerHTML]="value"></div>
+        <div *ngIf="portfolio">
+            <app-portfolio-card-container></app-portfolio-card-container>
+        </div>
     </div>
 </div>

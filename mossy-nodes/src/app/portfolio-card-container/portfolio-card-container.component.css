@@ -1,0 +1,12 @@
+.btn-success {
+    background-color: #3F8885;
+    margin: 0.25rem;
+}
+
+.carousel-inner {
+    align-items: center;
+}
+
+.carousel-item {
+    width: 100%;
+}
