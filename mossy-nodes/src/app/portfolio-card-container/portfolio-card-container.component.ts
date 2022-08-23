@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-portfolio-card-container',
@@ -6,7 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./portfolio-card-container.component.css']
 })
 export class PortfolioCardContainerComponent implements OnInit {
+  @Input() fullScreen: boolean = false;
+  @Input() content: any;
+  @Output() fullScreenButton: EventEmitter<any> = new EventEmitter();
   currentIndex = 0;
+  contentObject = {};
   constructor() { }
 
   ngOnInit(): void {
@@ -26,5 +30,9 @@ export class PortfolioCardContainerComponent implements OnInit {
       this.currentIndex >= 1  ? this.currentIndex -= 1 : this.currentIndex = 2;
       console.log(this.currentIndex)
     }
+  }
+
+  toggle() {
+    this.fullScreenButton.emit();
   }
 }

@@ -1,7 +1,39 @@
-img {
-    height: 50%;
+.card img {
+    height: 40vh;
+}
+
+.fs img {
+    height: 100%;
 }
 
 .card {
     width: 100%;
+}
+
+ul.projectDeck{
+    margin-top: 5%;
+    margin-left: 20%;
+    list-style: none;
+}
+
+li.projectCard{
+    margin-bottom: 10%;
+}
+
+.btn-primary {
+    background-color: #3F8885;
+}
+
+img.projectImg{
+    width: 70%;
+    height: 70%;
+}
+
+h4.projectHead{
+    font-size: 5vh;
+    color: whitesmoke;
+}
+
+p.workParagraph{
+    color: whitesmoke;
 }

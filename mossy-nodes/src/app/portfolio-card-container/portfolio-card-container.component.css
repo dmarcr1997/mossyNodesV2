@@ -3,10 +3,7 @@
     margin: 0.25rem;
 }
 
-.carousel-inner {
+.carousel {
+    display: flex;
     align-items: center;
-}
-
-.carousel-item {
-    width: 100%;
 }

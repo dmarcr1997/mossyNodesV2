@@ -1,9 +1,21 @@
-<div class="card mb-2">
-    <div class="card-img-top">
-        <img id="card-image" src="https://art.pixilart.com/77b6b881d3b4038.gif"/>
-    </div>
+<div *ngIf="(!showMore || !fullscreen) else moreItems" class="card mb-2 {{fullscreen ? 'fs' : ''}}">
+    <img id="card-image" src="https://art.pixilart.com/77b6b881d3b4038.gif"/>
     <div class="card-body">
         <h2 class="card-title">{{type}}</h2>
-        <div id="card-text">Body Text</div>
+        <div id="card-text">{{value}}</div>
+        <button class="btn btn-primary" (click)="toggleShowMore()">More</button>
     </div>
 </div>
+
+<ng-template #moreItems>
+    <div *ngIf="type === 'Blogs'">
+        <ul class="projectDeck">
+            <li class="projectCard" *ngFor="let blog of blogs">
+                <img class="projectImg" [id]="getId(blog.title)" src={{blog.social_image}}/>
+                <h4 class="projectHead">{{blog.title}}</h4>
+                <p class="workParagraph">{{blog.description}}</p>
+                <a href={{blog.canonical_url}}><button class="btn btn-primary">Read More</button></a>
+            </li>
+        </ul>
+    </div>
+</ng-template>

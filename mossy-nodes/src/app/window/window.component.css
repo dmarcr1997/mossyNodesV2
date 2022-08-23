@@ -64,10 +64,12 @@
     height: 80vh;
     background-color: #3F8885;
     margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .card-full-screen {
     position: absolute; 
+    z-index: 100;
     width: 100vw; 
     height: 150vh; 
     top:0;

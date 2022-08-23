@@ -19,9 +19,9 @@ export class WindowComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.table(this.content);
     this.header = this.content.header;
     this.value = this.content.value;
+    console.table(this.value);
   }
 
   closeButtonClicked(): void {
