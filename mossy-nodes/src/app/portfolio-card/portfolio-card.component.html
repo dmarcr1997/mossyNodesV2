@@ -1,5 +1,5 @@
 <div *ngIf="(!showMore || !fullscreen) else moreItems" class="card mb-2 {{fullscreen ? 'fs' : ''}}">
-    <img id="card-image" src="https://art.pixilart.com/77b6b881d3b4038.gif"/>
+    <img id="card-image" [src]="image"/>
     <div class="card-body">
         <h2 class="card-title">{{type}}</h2>
         <div id="card-text">{{value}}</div>
@@ -15,6 +15,21 @@
                 <h4 class="projectHead">{{blog.title}}</h4>
                 <p class="workParagraph">{{blog.description}}</p>
                 <a href={{blog.canonical_url}}><button class="btn btn-primary">Read More</button></a>
+            </li>
+        </ul>
+    </div>
+    <!-- <div *ngIf="type === 'School Work'">
+        <ul class="projectDeck">
+            TODO: create table
+        </ul>
+    </div> -->
+    <div *ngIf="type === 'Projects'">
+        <ul class="projectDeck">
+            <li class="projectCard" *ngFor="let proj of projects">
+                <img class="projectImg" [id]="proj.title" src={{proj.giffImg}}/>
+                <h4 class="projectHead">{{proj.title}}</h4>
+                <p class="workParagraph" [innerHtml]="proj.description"></p>
+                <a href={{proj.demoUrl}}><button class="btn btn-primary DemoButton">Demo</button></a>
             </li>
         </ul>
     </div>

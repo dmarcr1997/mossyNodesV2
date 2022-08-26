@@ -1,5 +1,6 @@
 .card img {
     height: 40vh;
+    border-radius: 1%;
 }
 
 .fs img {
@@ -12,28 +13,41 @@
 
 ul.projectDeck{
     margin-top: 5%;
-    margin-left: 20%;
     list-style: none;
 }
 
 li.projectCard{
+    background-image: url("src\assets\images\CardBGImg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     margin-bottom: 10%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 5rem;
+    color: #39FF14;
 }
 
-.btn-primary {
-    background-color: #3F8885;
+.btn-primary .DemoButton {
+    color: whitesmoke;
+}
+
+p.workParagraph a {
+    color: whitesmoke;
+    font: bolder;
 }
 
 img.projectImg{
     width: 70%;
     height: 70%;
+    align-self: center;
+    border-radius: 1%;
+    box-shadow: whitesmoke 0px 2.5px 7.5px;
 }
 
 h4.projectHead{
     font-size: 5vh;
-    color: whitesmoke;
-}
-
-p.workParagraph{
-    color: whitesmoke;
 }

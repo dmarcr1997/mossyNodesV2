@@ -4,13 +4,13 @@
     </div>
     <div class="carousel-inner" role='listbox'>
         <div class="carousel-item {{ getActive(0) ? 'active' : '' }}">
-            <app-portfolio-card [fullscreen]="fullScreen" [type]="content.projects.header" [value]="content.projects.value" (toggleShowMoreEmit)="toggle()"></app-portfolio-card>
+            <app-portfolio-card [fullscreen]="fullScreen" [type]="content.projects.header" [value]="content.projects.value" (toggleShowMoreEmit)="toggle()" [image]="content.projects.cardImgSrc"></app-portfolio-card>
         </div>
         <div class="carousel-item {{ getActive(1) ? 'active' : '' }}">
-            <app-portfolio-card [fullscreen]="fullScreen" (active)="getActive(1)" [type]="content.blogs.header" [value]="content.blogs.value" (toggleShowMoreEmit)="toggle()"></app-portfolio-card>
+            <app-portfolio-card [fullscreen]="fullScreen" (active)="getActive(1)" [type]="content.blogs.header" [value]="content.blogs.value" (toggleShowMoreEmit)="toggle()" [image]="content.blogs.cardImgSrc"></app-portfolio-card>
         </div>
         <div class="carousel-item {{ getActive(2) ? 'active' : '' }}">
-            <app-portfolio-card [fullscreen]="fullScreen" (active)="getActive(2)" [type]="content.school.header" [value]="content.school.value" (toggleShowMoreEmit)="toggle()"></app-portfolio-card>
+            <app-portfolio-card [fullscreen]="fullScreen" (active)="getActive(2)" [type]="content.school.header" [value]="content.school.value" (toggleShowMoreEmit)="toggle()" [image]="content.school.cardImgSrc"></app-portfolio-card>
         </div>
     </div>
     <div class="controls-top">

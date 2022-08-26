@@ -47,3 +47,8 @@ export class NavbarComponent implements OnInit {
     this.active = 'top';
   }
 }
+
+
+/* TODO:
+  Create Resume component
+*/
