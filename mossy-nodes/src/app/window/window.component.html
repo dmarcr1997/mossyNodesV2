@@ -4,7 +4,7 @@
         <button id="full-screen-button{{ getButtonStyle() }}" (click)="fullScreenButtonClicked()"><strong>&#x26F6;</strong></button>
     </div>
     <div class="card-body pop-up-card">
-        <h1 class="card-title" [innerHTML]="header"></h1>
+        <h1 class="card-title" [innerHTML]="header" *ngIf="!fullScreen"></h1>
         <div *ngIf="portfolio">
             <app-portfolio-card-container [fullScreen]="fullScreen" [content]="value" (fullScreenButton)="fullScreenButtonClicked()"></app-portfolio-card-container>
         </div>

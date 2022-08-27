@@ -57,14 +57,12 @@ export class PortfolioCardComponent implements OnInit {
   }
 
   toggleShowMore() {
-    this.showMore = true;
-    this.fullscreen = true;
+    this.fullscreen = !this.fullscreen;
     this.toggleShowMoreEmit.emit();
     console.log(this.showMore);
   }
   
   /*TODO: 
-    setup showmore toggle/sticky button
     setup image scaling on projects/blog pages
     create coursework page
   */

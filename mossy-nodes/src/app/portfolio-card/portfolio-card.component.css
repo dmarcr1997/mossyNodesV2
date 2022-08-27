@@ -14,6 +14,7 @@
 ul.projectDeck{
     margin-top: 5%;
     list-style: none;
+    padding: 0;
 }
 
 li.projectCard{
@@ -50,4 +51,17 @@ img.projectImg{
 
 h4.projectHead{
     font-size: 5vh;
+}
+
+.floating-header {
+    position: fixed;
+    flex-direction: row;
+    background-color: #BEAA79;
+    border: 5px solid #3F8885;
+    border-radius: 25px;
+    padding: 1rem;
+}
+
+.floating-header h1 {
+    font-size: 5rem;
 }
