@@ -6,7 +6,6 @@ import axios from 'axios';
   providedIn: 'root'
 })
 export class ContactService {
-  // private api = 'https://mailthis.to/mossynodes'
   constructor(private http: HttpClient ) {}
 
   PostMessage(input: any) {

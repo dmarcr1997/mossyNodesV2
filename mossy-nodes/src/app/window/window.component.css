@@ -23,6 +23,24 @@
     margin-top: 1rem;;
 }
 
+::ng-deep .resumeButton {
+    padding: 1rem 1rem;
+    background-color: #3F8885;
+    color: white;
+    border-radius: 5%;
+}
+
+::ng-deep .iconContainers {
+    display: flex;
+    margin-bottom: 3rem;
+}
+
+::ng-deep .resumeWindow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #close-button {
     top: 0;
     float: right;
@@ -135,5 +153,42 @@
         border-radius: 5%;
         font-size: large;
         background-color: #BEAA79;
+    }
+    ::ng-deep div.iconContainers a.iconLink img.linkImg {
+        width: 15vw;
+        height: 15vh;
+        margin-right: 10vw;
+    }
+
+    ::ng-deep .resumeButton {
+        padding: 5vw;
+        background-color: #3F8885;
+        color: white;
+        border-radius: 5%;
+        margin-bottom: 3rem;
+    }
+
+    ::ng-deep .resumeWindow {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media screen and (max-width: 350px) {
+
+    ::ng-deep .resumeWindow {
+        display: flex;
+        flex-direction: column;
+    }
+
+    ::ng-deep div.iconContainers a.iconLink img.linkImg {
+        width: 15vw;
+        height: 15vh;
+        margin-right: 2vw;
+    }
+
+    ::ng-deep .iconContainers {
+        display: flex;
+        margin-bottom: 0;
     }
 }
