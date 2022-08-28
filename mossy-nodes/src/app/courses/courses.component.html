@@ -1,0 +1,23 @@
+<div class="card mb-2">
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Course</th>
+        <th scope="col">Work</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let course of courses; index as i">
+            <th scope="row">{{ i + 1 }}</th>
+            <td>
+                <ngb-highlight [result]="course.className"></ngb-highlight>
+            </td>
+            <td><ul><li *ngFor="let work of course.work">
+                <h4 [innerHtml]="work.name"></h4>
+                <a [href]="work.link">View</a>
+            </li></ul></td>
+        </tr>
+    </tbody>
+</table>
+</div>

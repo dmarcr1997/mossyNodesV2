@@ -5,7 +5,7 @@
 }
 
 .card-header {
-    margin-right: 1vw;
+    margin-right: 0.5vw;
 }
 
 ::ng-deep .pop-up-card h1 strong {
@@ -81,8 +81,7 @@
     width: 120vh; 
     height: 80vh;
     background-color: #3F8885;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 0rem;
 }
 
 .card-full-screen {
@@ -114,7 +113,10 @@
         width: 35rem; 
         height: 80vh;
         background-color: #3F8885;
-        margin-top: 2rem;
+        margin-top: 0rem;
+    }
+    ::ng-deep .pop-up-card h1 strong {
+        font-size: 3rem;
     }
 }
 
@@ -172,6 +174,10 @@
         display: flex;
         flex-direction: row;
     }
+
+    ::ng-deep .pop-up-card h1 strong {
+        font-size: 2rem;
+    }
 }
 
 @media screen and (max-width: 350px) {
@@ -190,5 +196,9 @@
     ::ng-deep .iconContainers {
         display: flex;
         margin-bottom: 0;
+    }
+
+    ::ng-deep .pop-up-card h1 strong {
+        font-size: 1rem;
     }
 }

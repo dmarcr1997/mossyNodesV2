@@ -26,7 +26,6 @@ export class PortfolioCardContainerComponent implements OnInit {
       this.currentIndex < 2 ? this.currentIndex += 1 : this.currentIndex = 0;
       console.log(this.currentIndex)
     } else {
-      
       this.currentIndex >= 1  ? this.currentIndex -= 1 : this.currentIndex = 2;
       console.log(this.currentIndex)
     }

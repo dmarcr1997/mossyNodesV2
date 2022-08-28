@@ -1,6 +1,6 @@
 <div class='carousel slide' data-ride='carousel'>
     <div class="controls-top" *ngIf="!fullScreen">
-        <a (click)="setActive(true)"><button class="btn btn-success btn-md">&#x2190;</button></a>
+        <a (click)="setActive(false)"><button class="btn btn-success btn-md">&#x2190;</button></a>
     </div>
     <div class="carousel-inner" role='listbox'>
         <div class="carousel-item {{ getActive(0) ? 'active' : '' }}">

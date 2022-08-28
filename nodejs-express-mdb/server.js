@@ -46,6 +46,24 @@ router.get("/projects", async (req, res) => {
         client.close();
     }
     res.json({ data: content });
+});
+router.get("/coursework", async (req, res) => {
+    const DATABASE = "Portfolio";
+    const COLLECTION = "Coursework";
+    let content = [];
+    try{
+        await client.connect();
+        await client.db(DATABASE).command({ ping: 1 });
+        console.log("Connected to database server");
+        const collection = client.db(DATABASE).collection(COLLECTION);
+        // perform actions on the collection object
+        content = await collection.find({}).toArray();
+    } catch(error) {
+        throw new Error("Issue Collecting Content: ", error.message);
+    } finally {
+        client.close();
+    }
+    res.json({ data: content });
 })
 router.get("/", async (req, res) => {
     const DATABASE = "Portfolio";

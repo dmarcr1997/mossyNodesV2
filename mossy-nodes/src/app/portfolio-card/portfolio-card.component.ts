@@ -63,7 +63,6 @@ export class PortfolioCardComponent implements OnInit {
   }
   
   /*TODO: 
-    setup image scaling on projects/blog pages
     create coursework page
   */
 }

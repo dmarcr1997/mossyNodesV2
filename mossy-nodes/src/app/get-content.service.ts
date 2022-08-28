@@ -16,4 +16,8 @@ export class GetContentService {
   getProjects(): Observable<any> {
     return this.http.get("http://localhost:8080/projects");
   }
+
+  getCourses(): Observable<any> {
+    return this.http.get("http://localhost:8080/coursework");
+  }
 }

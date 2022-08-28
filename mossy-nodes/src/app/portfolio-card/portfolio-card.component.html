@@ -8,7 +8,7 @@
 </div>
 
 <ng-template #moreItems>
-    <div class="floating-header">
+    <div class="floating-header" *ngIf="type !== 'School Work'">
         <h1 class="card-title"><strong>{{type}}</strong></h1>
         <button class="btn btn-primary showLess" (click)="toggleShowMore()">Less</button>
     </div>
@@ -23,11 +23,11 @@
             </li>
         </ul>
     </div>
-    <!-- <div *ngIf="type === 'School Work'">
-        <ul class="projectDeck">
-            TODO: create table
-        </ul>
-    </div> -->
+    <div *ngIf="type === 'School Work'">
+        <h1 class="card-title"><strong>{{type}}</strong></h1>
+        <app-courses></app-courses>
+        <button class="btn btn-primary" (click)="toggleShowMore()">Less</button>
+    </div>
     <div *ngIf="type === 'Projects'">
         <ul class="projectDeck">
             <li class="projectCard" *ngFor="let proj of projects">
