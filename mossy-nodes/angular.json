@@ -97,6 +97,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "mossy-nodes:build:production",
+            "firebaseProject": "circuitfox-eb35c",
+            "firebaseHostingSite": "circuitfox-eb35c"
+          }
         }
       }
     }

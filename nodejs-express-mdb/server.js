@@ -7,7 +7,7 @@ const { MongoClient } = require("mongodb");
 const { environment } = require("./env");
 
 var corsOptions = {
-    origin: "http://localhost:4200",
+    origin: "circuit-fox.net",
     
 };
 
@@ -23,9 +23,9 @@ app.use(express.urlencoded({ extended: true }));
 // simple route
 app.use(function(req,res,next){
     res.setHeader( 'Access-Control-Allow-Headers', 'Accept,Accept-Language,Content-Language,Content-Type');
-    res.setHeader('Access-Control-Allow-Origin','http://localhost:4200');
-    res.setHeader('Access-Control-Allow-Methods','http://localhost:4200','POST', 'GET');
-    res.setHeader('Access-Control-Allow-Credentials','http://localhost:4200', true);
+    res.setHeader('Access-Control-Allow-Origin','http://circuit-fox.net');
+    res.setHeader('Access-Control-Allow-Methods','http://circuit-fox.net','POST', 'GET');
+    res.setHeader('Access-Control-Allow-Credentials','http://circuit-fox.net', true);
     next();
 })
 
