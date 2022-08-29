@@ -32,57 +32,27 @@ app.use(function(req,res,next){
 router.get("/projects", async (req, res) => {
     const DATABASE = "Portfolio";
     const COLLECTION = "Projects";
-    let content = [];
-    try{
-        await client.connect();
-        await client.db(DATABASE).command({ ping: 1 });
-        console.log("Connected to database server");
-        const collection = client.db(DATABASE).collection(COLLECTION);
-        // perform actions on the collection object
-        content = await collection.find({}).toArray();
-    } catch(error) {
-        throw new Error("Issue Collecting Content: ", error.message);
-    } finally {
-        client.close();
-    }
-    res.json({ data: content });
+    let projects = await retrieveFromDB(DATABASE, COLLECTION);
+    
+    res.json({ data: projects });
 });
+
 router.get("/coursework", async (req, res) => {
     const DATABASE = "Portfolio";
     const COLLECTION = "Coursework";
-    let content = [];
-    try{
-        await client.connect();
-        await client.db(DATABASE).command({ ping: 1 });
-        console.log("Connected to database server");
-        const collection = client.db(DATABASE).collection(COLLECTION);
-        // perform actions on the collection object
-        content = await collection.find({}).toArray();
-    } catch(error) {
-        throw new Error("Issue Collecting Content: ", error.message);
-    } finally {
-        client.close();
-    }
-    res.json({ data: content });
-})
+    let coursework = await retrieveFromDB(DATABASE, COLLECTION);
+    
+    res.json({ data: coursework });
+});
+
 router.get("/", async (req, res) => {
     const DATABASE = "Portfolio";
     const COLLECTION = "Content";
-    let content = [];
-    try{
-        await client.connect();
-        await client.db(DATABASE).command({ ping: 1 });
-        console.log("Connected to database server");
-        const collection = client.db(DATABASE).collection(COLLECTION);
-        // perform actions on the collection object
-        content = await collection.find({}).toArray();
-    } catch(error) {
-        throw new Error("Issue Collecting Content: ", error.message);
-    } finally {
-        client.close();
-    }
+    let content = await retrieveFromDB(DATABASE, COLLECTION);
+    
     res.json({ data: content });
 });
+
 router.post("/contact", (req, res) => {
     const { email, name, message } = req.body;
     try{
@@ -97,7 +67,7 @@ router.post("/contact", (req, res) => {
         console.error(err.message);
         res.status(500).json({ error: err.message });
     }
-})
+});
 
 app.use("/", router);
 
@@ -106,3 +76,18 @@ const PORT = process.env['PORT'] || 8080;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}.`);
 });
+
+async function retrieveFromDB(DB, COLL) {
+    try{
+        await client.connect();
+        await client.db(DB).command({ ping: 1 });
+        console.log("Connected to database server");
+        const collection = client.db(DB).collection(COLL);
+        // perform actions on the collection object
+        return await collection.find({}).toArray();
+    } catch(error) {
+        throw new Error("Issue Collecting Content: ", error.message);
+    } finally {
+        client.close();
+    }
+}
