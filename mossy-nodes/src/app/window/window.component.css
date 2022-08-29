@@ -13,8 +13,8 @@
 }
 
 ::ng-deep .pop-up-card div.cardHtml img {
-    width: 30vh;
-    height: 30vh;
+    width: 25vw;
+    height: 50vh;
     float: left;
 }
 

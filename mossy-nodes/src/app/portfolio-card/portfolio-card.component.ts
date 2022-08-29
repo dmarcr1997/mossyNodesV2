@@ -1,6 +1,8 @@
 import { ThisReceiver } from '@angular/compiler';
 import { Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation } from '@angular/core';
 import { GetContentService } from '../get-content.service';
+import { IBlog } from '../models/IBlog';
+import { IProject } from '../models/IProject';
 
 @Component({
   selector: 'app-portfolio-card',
@@ -15,8 +17,8 @@ export class PortfolioCardComponent implements OnInit {
   @Input() fullscreen: boolean = false;
   @Output() toggleShowMoreEmit: EventEmitter<boolean> = new EventEmitter();
   showMore: boolean = false;
-  blogs!: any[];
-  projects!: any[];
+  blogs!: IBlog[];
+  projects!: IProject[];
   constructor(private getContBackend: GetContentService) { }
 
   ngOnInit(): void {
@@ -30,13 +32,11 @@ export class PortfolioCardComponent implements OnInit {
       this.getContBackend.getProjects().subscribe(data => {
         this.projects = data.data.sort(this.sortTitle)
       });
-      console.log(this.image)
-
   }
 
   saveBlogs(data: any) {
     console.log('Done');
-    this.blogs = data;
+    this.blogs = data.sort(this.sortTitle);
     this.image = this.getBlogImage();
   }
 

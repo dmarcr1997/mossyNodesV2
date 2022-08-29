@@ -84,10 +84,9 @@ async function retrieveFromDB(DB, COLL) {
         console.log("Connected to database server");
         const collection = client.db(DB).collection(COLL);
         // perform actions on the collection object
-        return await collection.find({}).toArray();
+        return collection.find({}).toArray();
     } catch(error) {
+        console.log("Error: " + JSON.stringify(error));
         throw new Error("Issue Collecting Content: ", error.message);
-    } finally {
-        client.close();
     }
 }

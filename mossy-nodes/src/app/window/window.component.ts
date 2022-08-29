@@ -1,6 +1,4 @@
-import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
-import { Observable } from 'rxjs';
-import { IContent } from '../models/IContent';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { IContentItem } from '../models/IContentItem';
 
 @Component({
@@ -21,7 +19,6 @@ export class WindowComponent implements OnInit {
   ngOnInit(): void {
     this.header = this.content.header;
     this.value = this.content.value;
-    console.table(this.value);
   }
 
   closeButtonClicked(): void {

@@ -13,7 +13,6 @@
         <button class="btn btn-primary showLess" (click)="toggleShowMore()">Less</button>
     </div>
     <div *ngIf="type === 'Blogs'">
-        
         <ul class="projectDeck">
             <li class="projectCard" *ngFor="let blog of blogs">
                 <img class="projectImg" [id]="getId(blog.title)" src={{blog.social_image}}/>
@@ -34,7 +33,7 @@
                 <img class="projectImg" [id]="proj.title" src={{proj.giffImg}}/>
                 <h4 class="projectHead">{{proj.title}}</h4>
                 <p class="workParagraph" [innerHtml]="proj.description"></p>
-                <a href={{proj.demoUrl}}><button class="btn btn-primary DemoButton">Demo</button></a>
+                <a *ngIf="proj.demoUrl" href={{proj.demoUrl}}><button class="btn btn-primary DemoButton">Demo</button></a>
             </li>
         </ul>
     </div>

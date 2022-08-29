@@ -24,10 +24,8 @@ export class PortfolioCardContainerComponent implements OnInit {
   setActive(next: boolean): void {
     if(next){
       this.currentIndex < 2 ? this.currentIndex += 1 : this.currentIndex = 0;
-      console.log(this.currentIndex)
     } else {
       this.currentIndex >= 1  ? this.currentIndex -= 1 : this.currentIndex = 2;
-      console.log(this.currentIndex)
     }
   }
 
