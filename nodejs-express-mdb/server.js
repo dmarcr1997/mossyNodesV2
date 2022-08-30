@@ -4,30 +4,17 @@ const app = express();
 const axios = require("axios");
 const router = express.Router();
 const { MongoClient } = require("mongodb");
-const { environment } = require("./env");
-
-var corsOptions = {
-    origin: "circuit-fox.net",
-    
-};
+const { environment } = require("./env.js");
 
 const uri = `${environment.URL}`;
 //@ts-ignore
 const client = new MongoClient(uri);
 
-app.use(cors(corsOptions));
+app.use(cors());
 // parse requests of content-type - application/json
 app.use(express.json());
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(express.urlencoded({ extended: true }));
-// simple route
-app.use(function(req,res,next){
-    res.setHeader( 'Access-Control-Allow-Headers', 'Accept,Accept-Language,Content-Language,Content-Type');
-    res.setHeader('Access-Control-Allow-Origin','http://circuit-fox.net');
-    res.setHeader('Access-Control-Allow-Methods','http://circuit-fox.net','POST', 'GET');
-    res.setHeader('Access-Control-Allow-Credentials','http://circuit-fox.net', true);
-    next();
-})
 
 router.get("/projects", async (req, res) => {
     const DATABASE = "Portfolio";

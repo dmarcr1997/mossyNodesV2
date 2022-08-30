@@ -10,14 +10,14 @@ export class GetContentService {
   constructor(private readonly http: HttpClient) { }
 
   getContent(): Observable<any> {
-      return this.http.get("http://localhost:8080");
+      return this.http.get("https://circuit-fox-server.herokuapp.com/");
   }
 
   getProjects(): Observable<any> {
-    return this.http.get("http://localhost:8080/projects");
+    return this.http.get("https://circuit-fox-server.herokuapp.com/projects");
   }
 
   getCourses(): Observable<any> {
-    return this.http.get("http://localhost:8080/coursework");
+    return this.http.get("https://circuit-fox-server.herokuapp.com/coursework");
   }
 }

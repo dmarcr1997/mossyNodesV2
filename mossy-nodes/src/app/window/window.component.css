@@ -13,8 +13,8 @@
 }
 
 ::ng-deep .pop-up-card div.cardHtml img {
-    width: 25vw;
-    height: 50vh;
+    width: 30vw;
+    height: 25vw;
     float: left;
 }
 
@@ -177,6 +177,12 @@
 
     ::ng-deep .pop-up-card h1 strong {
         font-size: 2rem;
+    }
+    ::ng-deep .pop-up-card div.cardHtml img {
+        width: 100vw;
+        height: 50vw;
+        float: right;
+        margin-left: 0;
     }
 }
 

@@ -11,7 +11,7 @@ export class ContactService {
   PostMessage(input: any) {
     //send to backend server
     console.log("Sending your data to backend server...");
-    return axios.post("http://localhost:8080/contact", input).catch(err => console.error);
+    return axios.post("https://circuit-fox-server.herokuapp.com/contact", input).catch(err => console.error);
   }
 }
 
